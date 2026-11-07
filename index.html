@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JumpAI: Bloomvale Meadow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="hud"></div>
+
+    <section id="title" class="overlay">
+      <div class="card">
+        <h1>JumpAI</h1>
+        <p class="sub">World 1: Bloomvale Meadow</p>
+        <p class="lead">The Hush has drained the colour from the world. Win back the 7 Prisms of Bloomvale with a friend.</p>
+        <div class="buttons">
+          <button data-start="1">1 Player <kbd>1</kbd></button>
+          <button data-start="2" class="primary">2 Players <kbd>2</kbd></button>
+        </div>
+        <label class="assist"><input type="checkbox" id="assist" /> Assist mode (half damage)</label>
+        <table class="controls">
+          <thead><tr><th></th><th>Tali (P1)</th><th>Bram (P2)</th><th>Gamepad</th></tr></thead>
+          <tbody>
+            <tr><td>Move</td><td>W A S D</td><td>Arrow keys</td><td>Left stick</td></tr>
+            <tr><td>Jump</td><td>Space</td><td>Enter</td><td>A</td></tr>
+            <tr><td>Crouch / Ground pound</td><td>Left Shift or C</td><td>Right Shift</td><td>B</td></tr>
+            <tr><td>Punch / Dive</td><td>F</td><td>/</td><td>X</td></tr>
+            <tr><td>Grab / Toss partner</td><td>G</td><td>.</td><td>Y</td></tr>
+            <tr><td>Camera</td><td>Q / E or drag mouse</td><td>[ / ]</td><td>Right stick</td></tr>
+          </tbody>
+        </table>
+        <p class="moves">Chain jumps for a double and triple jump &middot; Crouch + jump: backflip &middot; Run + crouch + jump: long jump &middot; Jump into a wall, then jump again: wall kick &middot; Esc pauses &middot; M toggles music</p>
+      </div>
+    </section>
+
+    <section id="pause" class="overlay">
+      <div class="card small">
+        <h2>Paused</h2>
+        <button id="resume" class="primary">Resume</button>
+      </div>
+    </section>
+
+    <section id="win" class="overlay">
+      <div class="card small">
+        <h2>Bloomvale is blooming again!</h2>
+        <p>All 7 Prisms restored. The meadow is back in full colour.</p>
+        <button id="keep-playing" class="primary">Keep exploring</button>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
